@@ -565,7 +565,7 @@ static cJSON_bool print_number(const cJSON * const item, printbuffer * const out
     else
     {
         /* If decimal places are present and value is not an integer type */
-        if (item->decimal_places && (ceil(d) != d)) {
+        if (item->decimal_places) {
             /* Then convert it to string */
             length = sprintf((char*) number_buffer, "%.*f", item->decimal_places, d);
         } else {
